@@ -1,40 +1,47 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Gohighlevel Backend Coding Challenge
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Social Network
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This is a NestJS project with a focus on creating and managing posts and users. It includes modules for posts, users, and timelines.
 
-## Description
+## Modules
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Post Module: Implemented in src/post/post.module.ts
+User Module: Implemented in src/users/users.module.ts
+Timeline Module: Implemented in src/timeline/timeline.module.ts
+
+## Entities
+
+Post Entity: Defined in src/entities/post.entity.ts
+User Entity: Defined in src/entities/user.entity.ts
+User Followers Entity: Defined in src/entities/user_followers.entity.ts
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 
+Refer to .env.dst to add you environment variables
+
 ```bash
-$ npm install
+
+npm i
+yarn install
+pnpm install
 ```
 
-## Running the app
+## Usage
+
+Instructions
 
 ```bash
+source .env
+npm run start
+
 # development
 $ npm run start
 
@@ -45,29 +52,16 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Contributing
 
-```bash
-# unit tests
-$ npm run test
+We welcome contributions to improve this project. To contribute, please follow these guidelines:
 
-# e2e tests
-$ npm run test:e2e
+1. Fork the repository and create a new branch for your contribution.
+2. Make your changes and ensure they are well-tested.
+3. Submit a pull request with a clear description of your changes and the problem they solve.
 
-# test coverage
-$ npm run test:cov
-```
+Please note that all contributions are subject to review and may require some changes before being merged.
 
-## Support
+Thank you for your contribution!
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+## Contact
