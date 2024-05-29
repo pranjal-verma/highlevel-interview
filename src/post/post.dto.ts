@@ -12,3 +12,10 @@ export class PostDTO {
   @IsNumber()
   userId: number;
 }
+
+export class PostResponseDto {
+  id: number;
+  title: string;
+  body: string;
+  userId: number;
+}

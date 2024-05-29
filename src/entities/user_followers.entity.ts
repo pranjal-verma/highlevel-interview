@@ -5,8 +5,8 @@ export class UserFollowers {
   @PrimaryGeneratedColumn()
   id: number;
   @ManyToOne(() => User, (user) => user.id)
-  user_id: User;
+  user: User;
 
   @ManyToOne(() => User, (user) => user.id)
-  follower_id: User;
+  follower: User;
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { PostEntity } from 'src/entities/post.entity';
-import { PostDTO } from './post.dto'; // Add this line
+import { PostDTO } from './post.dto';
 // import { User } from 'src/entities/user.entity';
 @Injectable()
 export class PostService {
@@ -18,11 +18,17 @@ export class PostService {
   }
 
   // Return all posts of a user
-  async getUserPosts(userId: number): Promise<PostEntity[]> {
-    const postsArr = this.postRepository
+
+  async getUserPosts(userId: number[], options: any): Promise<PostEntity[]> {
+    const queryBuilder = this.postRepository
       .createQueryBuilder('post')
-      .where('post.userId = :userId', { userId })
-      .execute();
+      .where('post.userId IN (:...userId)', { userId });
+    if (options && options.page && options.limit) {
+      queryBuilder
+        .offset((options.page - 1) * options.limit)
+        .limit(options.limit);
+    }
+    const postsArr = await queryBuilder.orderBy('createdAt').getMany();
 
     return postsArr;
   }

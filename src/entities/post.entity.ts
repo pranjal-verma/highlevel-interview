@@ -14,4 +14,7 @@ export class PostEntity {
 
   @ManyToOne(() => User, (user) => user.id)
   user: User;
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  createdAt: Date;
 }

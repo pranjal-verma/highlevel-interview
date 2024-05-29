@@ -25,4 +25,8 @@ export class UsersService {
   async follow(userID: number, followeId: number) {
     console.log('follow', userID, followeId);
   }
+
+  async getUser(userID: number): Promise<User> {
+    return this.userRepository.findOne({ where: { id: userID } });
+  }
 }

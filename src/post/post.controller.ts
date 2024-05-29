@@ -12,7 +12,7 @@ export class PostController {
 
   @Get()
   async getUserPosts(@Query('userId') userId: number) {
-    const posts = await this.postService.getUserPosts(userId);
+    const posts = await this.postService.getUserPosts([userId], null);
     return posts;
   }
 }
