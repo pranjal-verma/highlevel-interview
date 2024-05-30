@@ -30,6 +30,9 @@ export class TimelineService {
     }
     follows.user = await this.userService.getUser(userFollowers.userId);
     follows.follower = await this.userService.getUser(userFollowers.followerId);
+    if (!follows.user || !follows.follower) {
+      throw new HttpException('User not found', 404);
+    }
     await this.userFollowersRepository.save(follows);
   }
 
