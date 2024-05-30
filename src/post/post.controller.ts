@@ -5,7 +5,7 @@ import { PostService } from './post.service';
 export class PostController {
   constructor(private postService: PostService) {}
   @Post()
-  async createUser(@Body() post: any) {
+  async createPost(@Body() post: any) {
     const savedPost = await this.postService.createPost(post);
     return { id: savedPost.id };
   }
