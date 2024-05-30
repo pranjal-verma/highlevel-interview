@@ -25,7 +25,6 @@ export class TimelineController {
       userId: userID,
       followerId: followerID,
     };
-    console.log('userFollowerDTO', userFollower);
     await this.timelineService.follow(userFollower);
     return;
   }
